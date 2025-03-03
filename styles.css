@@ -59,20 +59,20 @@ audio {
 }
 
 #page-1 {
-  background-image: url(assets/map.png);
+  background-image: url(assets/world-1.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 #page-2 {
-  background-image: url(assets/image.png);
-  background-size: contain;
+  background-image: url(assets/world-2.png);
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 #page-3 {
-  background-image: url(assets/Pink.png);
-  background-size: contain;
+  background-image: url(assets/world-3.png);
+  background-size: cover;
   background-repeat: no-repeat;
 }
 

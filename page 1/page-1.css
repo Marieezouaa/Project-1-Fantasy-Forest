@@ -15,6 +15,93 @@ body {
   }
 }
 
+@keyframes crabShuffle {
+  0% {
+    transform: translate(-80px, 0);
+  }
+  50% {
+    transform: translate(80px, 0);
+  }
+  100% {
+    transform: translate(-80px, 0);
+  }
+}
+
+@keyframes crabShuffleTwo {
+  0% {
+    transform: translate(90px, 0);
+  }
+  50% {
+    transform: translate(-85px, 0);
+  }
+  100% {
+    transform: translate(90px, 0);
+  }
+}
+
+@keyframes bunnyHop {
+  0% {
+    transform: translate(50px, 0);
+  }
+  25% {
+    transform: translate(35px, 35px);
+  }
+  50% {
+    transform: translate(0, 50px);
+  }
+  75% {
+    transform: translate(-35px, 35px);
+  }
+  100% {
+    transform: translate(50px, 0);
+  }
+}
+
+@keyframes bunnyHopAndWiggle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateY(-15px) rotate(-2deg);
+  }
+  40% {
+    transform: translateY(0) rotate(2deg);
+  }
+  60% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+  80% {
+    transform: translateY(0) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes graveGuardWalk {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -80px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes graveGuardWalk2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -120px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 @keyframes movePlayerToSea {
   0% {
     transform: translate(-50%, -50%);
@@ -171,6 +258,76 @@ audio {
   padding: 0;
 }
 
+/*******************Guardians *********************/
+#crab-container1 {
+  position: absolute;
+  top: 72%;
+  left: 10%;
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  animation: crabShuffle 5s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+#crab-container2 {
+  position: absolute;
+  top: 72%;
+  left: 12%;
+  padding: 0;
+  margin: 0;
+  animation: crabShuffleTwo 5s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+#crab-container3 {
+  position: absolute;
+  top: 72%;
+  left: 14%;
+  padding: 0;
+  margin: 0;
+  animation: crabShuffle 5s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+#crab-container4 {
+  position: absolute;
+  top: 72%;
+  left: 16%;
+  padding: 0;
+  margin: 0;
+  animation: crabShuffleTwo 5s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+#crab1 {
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+}
+
+#crab2 {
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+}
+#crab3 {
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+}
+
+#crab4 {
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+}
+
 #portal {
   position: absolute;
   width: 100px;
@@ -181,6 +338,196 @@ audio {
   left: 51.8%;
   transform: translate(-50%, -50%);
 }
+
+#garden-bunny {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  padding: 0;
+  margin: 0;
+  animation: bunnyHop 15s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+#garden-bunny2 {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  padding: 0;
+  margin: 0;
+  animation: bunnyHopAndWiggle 15s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+#bunny {
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+}
+
+#bunny2 {
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+}
+
+#pearl-cat {
+  position: absolute;
+  bottom: 12%;
+  right: 42%;
+  padding: 0;
+  margin: 0;
+}
+
+#cat {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#pearl-cat2 {
+  position: absolute;
+  bottom: 16.5%;
+  right: 42%;
+  padding: 0;
+  margin: 0;
+}
+
+#cat2 {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#pearl-cat3 {
+  position: absolute;
+  bottom: 20.5%;
+  right: 42%;
+  padding: 0;
+  margin: 0;
+}
+
+#cat3 {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#pearl-cat4 {
+  position: absolute;
+  bottom: 24.5%;
+  right: 42%;
+  padding: 0;
+  margin: 0;
+}
+
+#cat4 {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#pearl-cat5 {
+  position: absolute;
+  bottom: 12%;
+  right: 36%;
+  padding: 0;
+  margin: 0;
+}
+
+#cat5 {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#pearl-cat6 {
+  position: absolute;
+  bottom: 16.5%;
+  right: 36%;
+  padding: 0;
+  margin: 0;
+}
+
+#cat6 {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#pearl-cat7 {
+  position: absolute;
+  bottom: 20.5%;
+  right: 36%;
+  padding: 0;
+  margin: 0;
+}
+
+#cat7 {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#pearl-cat8 {
+  position: absolute;
+  bottom: 24.5%;
+  right: 36%;
+  padding: 0;
+  margin: 0;
+}
+
+#cat8 {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#grave-guard {
+  position: absolute;
+  bottom: 19%;
+  right: 7.5%;
+  padding: 0;
+  margin: 0;
+  animation: graveGuardWalk 12s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+#grave-guardian {
+  padding: 0;
+  margin: 0;
+  width: 35px;
+  height: 35px;
+}
+
+#grave-guard1 {
+  position: absolute;
+  bottom: 19%;
+  right: 2.5%;
+  padding: 0;
+  margin: 0;
+  animation: graveGuardWalk2 12s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+#grave-guardian1 {
+  padding: 0;
+  margin: 0;
+  width: 35px;
+  height: 35px;
+}
+
+/******************* End of Guardians *********************/
 
 #player-container {
   position: absolute;
