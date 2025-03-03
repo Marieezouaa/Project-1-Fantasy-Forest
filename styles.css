@@ -49,15 +49,21 @@ body {
 }
 
 #page-1 {
-  background-image: url(assets/Brown.png);
+  background-image: url(assets/map.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #page-2 {
-  background-image: url(assets/Green.png);
+  background-image: url(assets/image.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #page-3 {
   background-image: url(assets/Pink.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #page-1:hover {

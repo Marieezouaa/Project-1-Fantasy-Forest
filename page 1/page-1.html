@@ -12,14 +12,19 @@
     <div id="main-content">
         <div id="game-area">
 
-            
+
 
             <label for="sea-treasure-toggle" id="sea-treasure"><img id="sea-treasure-image" src="assets/tchest.png"
                     alt="">
             </label>
             <input type="checkbox" id="sea-treasure-toggle" style="display: none;">
 
-
+            <div class="modal sea">
+                <p>You have discovered the treasure buried by the sea. Some say it washed up on shore after a pirate
+                    ship was attacked by a kraken.
+                </p>
+                <p>Click <img src="assets/tchest.png" alt=""> to return.</p>
+            </div>
 
 
 
@@ -28,7 +33,10 @@
             </label>
             <input type="checkbox" id="home-treasure-toggle" style="display: none;">
 
-
+            <div class="modal home">
+                <p>Great! You found the treasure by the old witches house.</p>
+                <p>Click <img src="assets/tchest.png" alt=""> to return.</p>
+            </div>
 
 
             <label for="grave-treasure-toggle" id="grave-treasure"><img id="grave-treasure-image"
@@ -36,15 +44,43 @@
             </label>
             <input type="checkbox" id="grave-treasure-toggle" style="display: none;">
 
+            <div class="modal grave">
+                <p>Grave</p>
+            </div>
 
+            <label for="garden-treasure-toggle" id="garden-treasure"><img id="garden-treasure-image"
+                    src="assets/tchest.png" alt="">
+            </label>
+            <input type="checkbox" id="garden-treasure-toggle" style="display: none;">
+
+            <div class="modal garden">
+                <p>Garden</p>
+            </div>
+
+            <label for="pearl-treasure-toggle" id="pearl-treasure"><img id="pearl-treasure-image"
+                    src="assets/tchest.png" alt="">
+            </label>
+            <input type="checkbox" id="pearl-treasure-toggle" style="display: none;">
+
+            <div class="modal pearl">
+                <p>Pearl</p>
+            </div>
+
+            <label for="diamond-treasure-toggle" id="diamond-treasure"><img id="diamond-treasure-image"
+                    src="assets/tchest.png" alt="">
+            </label>
+            <input type="checkbox" id="diamond-treasure-toggle" style="display: none;">
+
+            <div class="modal diamond">
+                <p>Diamond</p>
+            </div>
 
             <div id="player-container">
                 <img id="player" src="assets/player.png" alt="">
             </div>
 
-            <div id="portal-container">
-                <img id="portal" src="assets/portal.tiff" alt="">
-            </div>
+
+
         </div>
     </div>
 </body>

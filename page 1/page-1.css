@@ -6,76 +6,109 @@ body {
 
 /******************* Beginning of Keyframes *********************/
 
-@keyframes movePlayerRightPortal {
+@keyframes fadeInModal {
   0% {
-    color: yellow;
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(350px, 0);
+    opacity: 0;
   }
   100% {
-    color: red;
-    transform: translate(350px, 300px);
-  }
-}
-
-@keyframes movePlayerLeftPortal {
-  0% {
-    color: yellow;
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(350px, 0);
-  }
-  100% {
-    color: red;
-    transform: translate(350px, 300px);
+    opacity: 1;
   }
 }
 
 @keyframes movePlayerToSea {
   0% {
-    color: yellow;
-    transform: translate(0, 0);
+    transform: translate(-50%, -50%);
   }
-  25% {
-    transform: translate(-350px, 0);
+  10% {
+    transform: translate(-170px, 0px);
+  }
+  20% {
+    transform: translate(-180px, 20px);
+  }
+  30% {
+    transform: translate(-250px, 70px);
   }
   50% {
-    transform: translate(-350px, 0);
+    transform: translate(-325px, 150px);
   }
   100% {
-    color: red;
-    transform: translate(-250px, 250px);
+    transform: translate(-325px, 410px);
   }
 }
 
 @keyframes movePlayerToHouse {
   0% {
-    color: yellow;
     transform: translate(0, 0);
   }
+  15% {
+    transform: translate(5px, -140px);
+  }
+  25% {
+    transform: translate(45px, -140px);
+  }
   50% {
-    transform: translate(700px, 0);
+    transform: translate(58px, -350px);
   }
   100% {
-    color: red;
-    transform: translate(700px, -200px);
+    transform: translate(75px, -390px);
+  }
+}
+
+@keyframes movePlayerToGarden {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-260px, -70px);
+  }
+  100% {
+    transform: translate(-580px, -210px);
+  }
+}
+
+@keyframes movePlayerToPearl {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(130px, 0);
+  }
+  100% {
+    transform: translate(130px, 320px);
+  }
+}
+
+@keyframes movePlayerToDiamond {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(350px, -10px);
+  }
+  50% {
+    transform: translate(450px, -155px);
+  }
+  100% {
+    transform: translate(620px, -160px);
   }
 }
 
 @keyframes movePlayerToGraveyard {
   0% {
-    color: yellow;
-    transform: translate(0, 0);
+    transform: translate(-50%, -50%);
   }
-  50% {
-    transform: translate(950px, 0);
+  15% {
+    transform: translate(350px, -10px);
+  }
+  25% {
+    transform: translate(530px, 155px);
+  }
+  75% {
+    transform: translate(630px, 160px);
   }
   100% {
-    color: red;
-    transform: translate(950px, 400px);
+    transform: translate(630px, 310px);
   }
 }
 
@@ -148,7 +181,7 @@ body {
 #player-container {
   position: absolute;
   display: flex;
-  left: 49.7%;
+  left: 51%;
   top: 48%;
 }
 
@@ -160,25 +193,49 @@ body {
 
 #sea-treasure,
 #home-treasure,
-#grave-treasure {
+#grave-treasure,
+#garden-treasure,
+#pearl-treasure,
+#diamond-treasure {
   width: 16px;
   height: 16px;
   position: absolute;
-  border: 2px solid black;
   cursor: pointer;
   z-index: 10;
 }
 
 #sea-treasure-image,
 #home-treasure-image,
-#grave-treasure-image {
-  height: 17px;
-  width: 17px;
+#grave-treasure-image,
+#garden-treasure-image #pearl-treasure-image,
+#diamond-treasure-image {
+  height: 20px;
+  width: 20px;
 }
 
+.modal {
+  width: 250px;
+  height: 150px;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 100;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: -15px 0 0 0 black, 15px 0 0 0 black, 0 -15px 0 0 black,
+    0 15px 0 0 black;
+}
+
+/**********************SEA TREASURE************************/
+
 #sea-treasure {
-  top: 88.4%;
-  left: 23.4%;
+  top: 96%;
+  left: 29%;
 }
 
 #sea-treasure:hover,
@@ -187,12 +244,19 @@ body {
 }
 
 #sea-treasure-toggle:checked ~ #player-container {
-  animation: movePlayerToSea 2s forwards;
+  animation: movePlayerToSea 5s ease-in-out forwards;
 }
 
+#sea-treasure-toggle:checked ~ .modal.sea {
+  animation: none;
+  visibility: visible;
+  animation: fadeInModal 0.5s ease-in-out 5s forwards;
+}
+
+/*********************HOME TREASURE************************/
 #home-treasure {
-  top: 2%;
-  left: 55.3%;
+  top: 4.5%;
+  left: 59.5%;
 }
 
 #home-treasure:hover,
@@ -201,12 +265,81 @@ body {
 }
 
 #home-treasure-toggle:checked ~ #player-container {
-  animation: movePlayerToHouse 2s forwards;
+  animation: movePlayerToHouse 5s forwards;
 }
 
+#home-treasure-toggle:checked ~ .modal.home {
+  animation: none;
+  visibility: visible;
+  animation: fadeInModal 0.5s ease-in-out 5s forwards;
+}
+
+/*******************GARDEN TREASURE************************/
+#garden-treasure {
+  top: 23%;
+  left: 11%;
+}
+
+#garden-treasure:hover,
+#garden-treasure-image:hover {
+  animation: shake 0.5s;
+}
+
+#garden-treasure-toggle:checked ~ #player-container {
+  animation: movePlayerToGarden 5s forwards;
+}
+
+#garden-treasure-toggle:checked ~ .modal.garden {
+  animation: none;
+  visibility: visible;
+  animation: fadeInModal 0.5s ease-in-out 5s forwards;
+}
+
+/********************PEARL TREASURE************************/
+#pearl-treasure {
+  bottom: 12%;
+  right: 39.5%;
+}
+
+#pearl-treasure:hover,
+#pearl-treasure-image:hover {
+  animation: shake 0.5s;
+}
+
+#pearl-treasure-toggle:checked ~ #player-container {
+  animation: movePlayerToPearl 5s forwards;
+}
+
+#pearl-treasure-toggle:checked ~ .modal.pearl {
+  animation: none;
+  visibility: visible;
+  animation: fadeInModal 0.5s ease-in-out 5s forwards;
+}
+/******************DIAMOND TREASURE************************/
+#diamond-treasure {
+  top: 28%;
+  right: 7%;
+}
+
+#diamond-treasure:hover,
+#diamond-treasure-image:hover {
+  animation: shake 0.5s;
+}
+
+#diamond-treasure-toggle:checked ~ #player-container {
+  animation: movePlayerToDiamond 6s forwards;
+}
+
+#diamond-treasure-toggle:checked ~ .modal.diamond {
+  animation: none;
+  visibility: visible;
+  animation: fadeInModal 0.5s ease-in-out 5s forwards;
+}
+/********************GRAVE TREASURE************************/
+
 #grave-treasure {
-  bottom: 3.1%;
-  left: 50.5%;
+  bottom: 13%;
+  right: 6.3%;
 }
 
 #grave-treasure:hover,
@@ -215,5 +348,11 @@ body {
 }
 
 #grave-treasure-toggle:checked ~ #player-container {
-  animation: movePlayerToGraveyard 2s forwards;
+  animation: movePlayerToGraveyard 5s forwards;
+}
+
+#grave-treasure-toggle:checked ~ .modal.grave {
+  animation: none;
+  visibility: visible;
+  animation: fadeInModal 0.5s ease-in-out 5s forwards;
 }
