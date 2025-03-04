@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>World 3</title>
+        <link rel = "stylesheet" href = "page-3.css">
+    </head>
+    <body>
+        <div class = "map">
+            <!--audio-->
+            <audio controls autoplay loop src="assets/music/In the Temple Garden - Aaron Kenny.mp3"></audio>
+
+            <!--different sections for different interactions-->
+            <div class = "top-left"></div>
+            <div class = "top-right">
+
+                <!--chest 1 interaction-->
+                <label for="chest1-show" id="chest1"><img id="chest1-img" src="assets/chest.png" alt="chest1"></label>
+                <input type="checkbox" id="chest1-show">
+                <div class = "t1">
+                    <p>What a treasure...What a rarity...MOONLEAF! You heard it grants magical abilities. It would be great for a potion!</p>
+                    <p>+2<img class = "treasure" src = "assets/moonleaf.png" alt=""><img class = "treasure" src = "assets/moonleaf.png" alt=""></p>
+                    <p>Click <img src="assets/chest.png" alt=""> to return.</p>
+                </div>
+
+                <!--chest 2 interaction-->
+                <label for="chest2-show" id="chest2"><img id="chest2-img" src="assets/chest.png" alt="chest2"></label>
+                <input type="checkbox" id="chest2-show">
+                <div class = "t2">
+                    <p>UH, OH! There's nothing in here. What a waste!</p>
+                    <p>Click <img src="assets/chest.png" alt=""> to return.</p>
+                </div>
+
+                <!--chest 3 interaction-->
+                <label for="chest3-show" id="chest3"><img id="chest3-img" src="assets/chest.png" alt="chest3"></label>
+                <input type="checkbox" id="chest3-show">
+                <div class = "t3">
+                    <p>You're confused as your hand hits the bottom of this hole. You look inside...AHHHHHH BONES!</p>
+                    <p>-5 Satisfaction</p>
+                    <p>Click <img src="assets/chest.png" alt=""> to return.</p>
+                </div>
+
+                <!--chest 4 interaction-->
+                <label for="chest4-show" id="chest4"><img id="chest4-img" src="assets/chest.png" alt="chest4"></label>
+                <input type="checkbox" id="chest4-show">
+                <div class = "t4">
+                    <p>You feel something cold and hard.....A pile of gleaming, gilded, gliterring gold coins! Gucci!!! </p>
+                    <p>+100 <img class = "treasure" src = "assets/goldcoins1.png" alt=""></p>
+                    <p>Click <img src="assets/chest.png" alt=""> to return.</p>
+                </div>
+
+                <!--chest 5 interaction-->
+                <label for="chest5-show" id="chest5"><img id="chest5-img" src="assets/chest.png" alt="chest5"></label>
+                <input type="checkbox" id="chest5-show">
+                <div class = "t5">
+                    <p>What's this? A key? A key to where? You put it in your pocket as you continue your search. 
+                        Maybe it's to the abandoned house up there?</p>
+                    <p>+1 <img class = "treasure" src = "assets/key.png" alt=""></p>
+                    <p>Click <img src="assets/.png" alt=""> to return.</p>
+                </div>
+
+                <!--chest 6 interaction-->
+                <label for="chest6-show" id="chest6"><img id="chest6-img" src="assets/chest.png" alt="chest6"></label>
+                <input type="checkbox" id="chest6-show">
+                <div class = "t6">
+                    <p>Another pile of gleaming, gilded, gliterring gold coins! DOUBLE GUCCI!!!</p>
+                    <p>+100 <img class = "treasure" src = "assets/goldcoins1.png" alt=""></p>
+                    <p>Click <img src="assets/.png" alt=""> to return.</p>
+                </div>
+
+                <!--chest 7 interaction-->
+                <label for="chest7-show" id="chest7"><img id="chest7-img" src="assets/chest.png" alt="chest7"></label>
+                <input type="checkbox" id="chest7-show">
+                <div class = "t7">
+                    <p>UH OH, nothing again! You've realized you've gotten even dirtier for nothing!</p>
+                    <p>-1 Satifaction</p>
+                    <p>Click <img src="assets/chest.png" alt=""> to return.</p>
+                </div>
+
+                <!--chest 8 interaction-->
+                <label for="chest8-show" id="chest8"><img id="chest8-img" src="assets/chest.png" alt="chest8"></label>
+                <input type="checkbox" id="chest8-show">
+                <div class = "t8">
+                    <p>You've discovered a mystery recipe, to a potion that requires moonleaf and few flowers! Maybe you
+                        should collect some and head to the alchemy station nearby!</p>
+                    <p>+100 <img class = "treasure" src = "assets/recipe.webp" alt=""></p>
+                    <p>Click <img src="assets/chest.png" alt=""> to return.</p>
+                </div>
+            </div>
+
+            <!--portal placement and link-->
+            <a href = "file:///C:/Users/vicky/OneDrive/Desktop/Web/proj/Project-1-Fantasy-Forest/index.html"><img class = "portal"></a>
+
+            <!--alchemy table interaction-->
+            <label for="alchemy-show" id="alc"><img class = "alchemy" src = "assets/table.png" alt="alchemy"></label>
+            <input type="checkbox" id="alchemy-show">
+            <div class = "t9">
+                    <p>Turns out the recipe was for a magical hunger potion! YUCK! It's nasty, but it does the trick!</p>
+                    <p>+100 <img class = "treasure" src = "assets/food.png" alt=""></p>
+                    <p>Click <img src="assets/table.png" alt="" style = "width: 20%; height: 20%;"> to return.</p>
+            </div>
+            
+            <!--flower field section interaction-->
+            <label for="flower" class="click"></label>
+                <input type="checkbox" id="flower">
+                <div class="t10">
+                    <p>You've collected a beautiful assortment of flowers. Too bad you're about to eat them!</p>
+                    <p>+20 <img class = "treasure" src = "assets/flower.webp" alt=""></p>
+                    <p>Click <img src="assets/flower.webp" alt="" style = "width: 10%; height: 10%;"> to return.</p>
+                </div>
+
+            <!--abandoned house interaction-->
+            <label for="crib" class="click-crib"></label>
+                <input type="checkbox" id="crib">
+                <div class="t11">
+                    <p>The key worked! You found a whopping 5000 coins in the mattress, and a new map 
+                        that leads to an undiscovered world! Can't wait for the next adventure!</p>
+                    <p>+5000 <img class = "treasure" src = "assets/goldcoins1.png" alt="">
+                    +1 <img class = "treasure" src = "assets/map.webp" alt=""></p>
+                    <p>Click the house to return.</p>
+                </div>
+
+            <!--placement and interaction for icon that leads player to corresponding areas-->
+            <label for="buried-show" id="bur"><img class = "buried" src = "assets/icon.gif" alt = "buried"></label>
+            <input type="checkbox" id="buried-show">
+            <div class = player></div>
+
+            <label for="garden-show" id="gar"><img class = "garden" src = "assets/icon.gif" alt = "garden"></label>
+            <input type="checkbox" id="garden-show">
+            <div class = player></div>
+
+            <label for="house-show" id="hou"><img class = "house" src = "assets/icon.gif" alt = "house"></label>
+            <input type="checkbox" id="house-show">
+            <div class = player></div>
+            
+        </div>
+    </body>
+</html>
