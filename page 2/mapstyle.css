@@ -1,0 +1,181 @@
+    body{
+    background-image: url("map.png");
+    background-size: 1280px 720px;
+    background-repeat: no-repeat;
+}
+button {
+    width:auto;
+}
+img{
+    width: 30px;
+    position: relative;
+}
+.treebutton { 
+    background: url("!GIF.gif") no-repeat;  
+    cursor: pointer; 
+    border:none;
+    width: 30px;
+    position: fixed;
+    left: 481px;
+    top: 210px;
+} 
+
+.treebutton:active ~ .character_start{ 
+    animation: walkToTree 9s forwards;
+}
+
+.cowbutton { 
+    background: url("!GIF.gif") no-repeat;  
+    cursor: pointer; 
+    border:none;
+    width: 30px;
+    position: fixed;
+    left: 480px;
+    top: 490px;
+} 
+
+.cowbutton:active ~ .character_start {
+    animation: walkToCow 12s forwards;
+}
+.cowbutton:active ~ .cow_start{
+    animation: cowMove 15s forwards;
+}
+.chickenbutton { 
+    background: url("!GIF.gif") no-repeat;  
+    cursor: pointer; 
+    border:none;
+    width: 30px;
+    position: fixed;
+    left: 700px;
+    top: 220px;
+} 
+
+.chickenbutton:active ~ .character_start{ 
+    animation: walkToChicken 6s forwards;
+}
+.chickenbutton:active ~ .chicken_start{
+    animation: chickenSpin 3s forwards;
+}
+.portal {  
+    border:none;
+    width: 60px;
+    position: fixed;
+    left: 610px;
+    top: 325px;
+} 
+.character_start {
+    position: fixed;
+    left: 630px;
+    top: 340px;
+    width: 16px;
+    height: 16px;
+  }
+.chicken_start {
+    position: fixed;
+    left: 707px;
+    top: 250px;
+    width: 16px;
+    height: 16px;
+  }
+.cow_start {
+    position: fixed;
+    left: 480px;
+    top: 510px;
+    width: 32px;
+    height: 32px;
+  }
+
+@keyframes walkToTree {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0px, -50px); /* Move up */
+    }
+    30% {
+        transform: translate(-140px, -80px); /* Move to tree */
+    }
+    60% {
+        transform: translate(-140px, -80px); /* Move to tree */
+    }
+    75% {
+        transform: translate(0px, -50px); /* Move back */
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes walkToChicken {
+    0% {
+        transform: translate(0, 0);
+    }
+    30% {
+        transform: translate(100px, -80px); 
+    }
+    60% {
+        transform: translate(100px, -80px); 
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes walkToCow {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(-60px, 180px); 
+    }
+    40% {
+        transform: translate(-120px, 180px); 
+    }
+    80% {
+        transform: translate(20px, 180px); 
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes chickenSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg) translate(0, -5px);
+    }
+    60% {
+        transform: rotate(30deg);
+    }
+    70% {
+        transform: rotate(0deg) translate(0, -5px);
+    }
+    80% {
+        transform: rotate(-15deg);
+    }
+    90% {
+        transform: rotate(-30deg) translate(0, -5px);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes cowMove {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: translate(165px, 0px);
+    }
+    61% {
+        transform: scaleX(-1);
+    }
+    100% {
+        transform: translate(0px, 0px) scaleX(-1);
+    }
+}
